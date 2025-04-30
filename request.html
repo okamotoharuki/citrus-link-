@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>資料請求フォーム - Citrus Link</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       background: linear-gradient(to right, #fefae0, #e0f7fa);
       color: #333;
       margin: 0;
@@ -68,7 +69,7 @@
     <h1>資料請求フォーム</h1>
     <form action="https://formspree.io/f/xblodbod" method="POST" target="_self">
       <input type="hidden" name="_next" value="https://okamotoharuki.github.io/citrus-link/thankyou.html">
-      
+
       <label>お名前（必須）
         <input type="text" name="name" required>
       </label>
@@ -85,11 +86,15 @@
         <input type="text" name="phone">
       </label>
 
+      <label>送り先住所（任意）
+        <input type="text" name="address">
+      </label>
+
       <button type="submit">送信する</button>
     </form>
 
     <div class="back-link">
-      <a href="index.html">← ホームページに戻る</a>
+      <a href="index.html">← トップページに戻る</a>
     </div>
   </div>
 </body>
