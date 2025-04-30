@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Citrus Link</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fffdf5, #fefae0);
+      color: #333;
+    }
+    header {
+      position: relative;
+      background: linear-gradient(to right, #ffb703, #f9a825);
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    header .header-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
+      border-radius: 8px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: white;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #eee;
+      margin-top: 0.5rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #219ebc;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      margin: 0 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #ffb703;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: #ffffffbb;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 2rem;
+    }
+    footer {
+      background-color: #023047;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    h2 {
+      color: #264653;
+      font-size: 1.8rem;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    strong {
+      color: #fb8500;
+    }
+    @media (max-width: 768px) {
+      header .header-text h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section id="cta" style="text-align:center; padding:2rem; background:#fff3cd;">
+      <h2>あなたのみかん、次の市場へ</h2>
+      <p>農家の方も、加工会社の方も。まずは資料をご覧ください。</p>
+      <button style="margin:1rem; padding:1rem 2rem; font-size:1rem; border:none; border-radius:8px; background-color:#ffb703; color:white; cursor:pointer;">資料請求</button>
+      <button style="margin:1rem; padding:1rem 2rem; font-size:1rem; border:1px solid #ffb703; border-radius:8px; background:white; color:#ffb703; cursor:pointer;">農家の方はこちら</button>
+    </section>
+      <img src="mikan.jpeg" alt="みかんの写真">
+    <div class="header-text">
+      <h1>Citrus Link</h1>
+      <p>みかん農家と加工会社をつなぐ、新しい農業のかたち</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">事業概要</a>
+    <a href="#services">サービス</a>
+    <a href="#roadmap">ロードマップ</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <section id="about">
+    <h2>事業概要</h2>
+    <p>
+      Citrus Linkは、神奈川県小田原地域を中心に、温州みかん農家と食品加工会社を直接結びつける契約農業モデルを展開しています。
+      農協を介さない新しい流通経路を構築し、農家の価格交渉力と加工会社の安定調達の両立を目指します。
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>サービス</h2>
+    <ul>
+      <li><strong>契約農業マッチング</strong>：農家と加工会社を結び、安定取引を支援</li>
+      <li><strong>ブランド構築支援</strong>：みかんの物語性を活かした高付加価値化</li>
+      <li><strong>販路開拓</strong>：都市部への販売チャネルを構築</li>
+    </ul>
+  </section>
+  <section id="voice">
+    <h2>利用者の声</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+      <div style="flex:1; min-width:250px; background:#fefae0; padding:1rem; border-radius:10px;">
+        <p>「Citrus Linkで直接販売ができるようになって、収入が安定しました」</p>
+        <p><strong>― 小田原市・みかん農家</strong></p>
+      </div>
+      <div style="flex:1; min-width:250px; background:#fefae0; padding:1rem; border-radius:10px;">
+        <p>「品質が高くて安心して原料調達ができるように。毎年お願いしています」</p>
+        <p><strong>― 加工会社・仕入担当</strong></p>
+      </div>
+      <div style="flex:1; min-width:250px; background:#fefae0; padding:1rem; border-radius:10px;">
+        <p>「お客様にみかんのストーリーも一緒に届けられる商品。好評です」</p>
+        <p><strong>― セレクトショップ運営者</strong></p>
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <h2>ギャラリー</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+      <img src="https://via.placeholder.com/200x150?text=Farm+1" alt="みかん畑" style="border-radius:8px;">
+      <img src="https://via.placeholder.com/200x150?text=Processing" alt="加工現場" style="border-radius:8px;">
+      <img src="https://via.placeholder.com/200x150?text=Product" alt="商品例" style="border-radius:8px;">
+    </div>
+  </section>
+  <section id="faq">
+    <h2>よくある質問</h2>
+    <dl>
+      <dt><strong>Q. JAを通さないで販売して問題ありませんか？</strong></dt>
+      <dd>A. 問題ありません。契約農業モデルとして法的にも認められた方法です。</dd>
+  
+      <dt><strong>Q. 少量生産でも利用できますか？</strong></dt>
+      <dd>A. はい、5箱からの取引も可能です。</dd>
+  
+      <dt><strong>Q. 販売先はどこになりますか？</strong></dt>
+      <dd>A. 百貨店やレストラン、オンラインショップなど多様です。</dd>
+    </dl>
+  </section>
+  
+
+  <section id="roadmap">
+    <h2>ロードマップ</h2>
+    <p>
+      初年度は5〜10軒の契約農家と連携し、都市部への販路開拓・加工会社との提携を進めます。2年目以降は他地域・他果実への水平展開も視野に入れています。
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>
+      ご質問や提携のご相談は、以下の連絡先までお気軽にご連絡ください。<br>
+      <strong>Email: okamoto04140414@gmail.com</strong><br>
+      <strong>Tel: 070-8337-1350</strong>
+    </p>
+  </section>
+  <section id="company">
+    <h2>会社情報</h2>
+    <p><strong>屋号：</strong> Citrus Link（個人事業主）</p>
+    <p><strong>代表者：</strong> 岡本晴輝</p>
+    <p><strong>所在地：</strong> 神奈川県藤沢市湘南台2-5-5</p>
+    <p><strong>設立予定：</strong> 2025年9月1日</p>
+    <p><strong>事業内容：</strong> 契約農業仲介・ブランディング支援・販路開拓</p>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
+    <div>Instagram：https://www.instagram.com/okamoto_haruki_?igsh=MTU1dGVubjc5NzN1cQ%3D%3D&utm_source=qr</div>
+  </footer>
+</body>
+</html>
