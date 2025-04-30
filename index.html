@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citrus Link</title>
+  <title>Citrus Link | 契約農業で農家と加工会社をつなぐ</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,158 +12,149 @@
       padding: 0;
       background: #fefae0;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-image: url('mikan.jpeg');
-      background-size: cover;
-      background-position: center;
+      background: url('mikan.jpeg') center/cover no-repeat;
       height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      text-align: center;
+      align-items: center;
       color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
       position: relative;
     }
-    header::before {
+    header::after {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
     }
-    .hero-content {
-      position: relative;
+    header > * {
       z-index: 1;
     }
-    .hero-content h1 {
+    header h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin: 0.5rem;
     }
-    .hero-content p {
+    header p {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
     }
-    .hero-content a {
+    header a.button {
+      margin-top: 1rem;
       background: #ffb703;
       color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
       text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .hero-content a:hover {
-      background-color: #f9a825;
     }
     nav {
+      background-color: #219ebc;
+      padding: 1rem;
       display: flex;
       justify-content: center;
-      background-color: #219ebc;
-      padding: 1rem 0;
     }
     nav a {
-      margin: 0 1.5rem;
       color: white;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
     section {
       max-width: 960px;
       margin: 4rem auto;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
     }
     h2 {
-      color: #264653;
       font-size: 1.8rem;
+      color: #264653;
       margin-bottom: 1rem;
     }
-    ul {
-      line-height: 1.8;
-    }
-    .stats {
-      display: flex;
-      justify-content: space-around;
+    .stats, .roadmap {
       background: #fff;
       padding: 2rem;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       margin-top: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     .stats div {
-      text-align: center;
+      margin-bottom: 1rem;
     }
-    .stats div strong {
-      display: block;
-      font-size: 1.5rem;
+    .highlight {
       color: #fb8500;
+      font-weight: bold;
     }
     footer {
-      background-color: #023047;
+      background: #023047;
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-    footer a {
-      color: white;
-      margin: 0 0.5rem;
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="hero-content">
-      <h1>Citrus Link</h1>
-      <p>農家と未来を、やさしくつなぐ</p>
-      <a href="request.html">資料請求はこちら</a>
-    </div>
+    <h1>Citrus Link</h1>
+    <p>農協に頼らず、地域と未来をつなぐ契約農業の仕組み</p>
+    <a href="request.html" class="button">資料請求はこちら</a>
   </header>
 
   <nav>
-    <a href="#about">事業概要</a>
+    <a href="#concept">私たちの考え</a>
     <a href="#services">サービス</a>
+    <a href="#model">ビジネスモデル</a>
+    <a href="#roadmap">ロードマップ</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 
-  <section id="about">
-    <h2>事業概要</h2>
-    <p>
-      Citrus Linkは、神奈川県小田原を拠点に温州みかん農家と食品加工会社を直接つなぐ新しい農業流通モデルを提供しています。
-      農協を介さず、信頼関係と契約に基づく安定した流通を実現します。
-    </p>
-    <div class="stats">
-      <div><strong>10+</strong>契約農家</div>
-      <div><strong>15社</strong>提携企業</div>
-      <div><strong>3年</strong>継続率</div>
-    </div>
+  <section id="concept">
+    <h2>なぜCitrus Linkか</h2>
+    <p>農家はJAに依存せずに販路を得たい。加工会社は安定した原材料を確保したい。<br>
+    Citrus Linkは、温州みかんをはじめとする農産物の契約農業を通じて、双方に新しい価値と安定を届ける事業です。</p>
   </section>
 
   <section id="services">
-    <h2>サービス内容</h2>
+    <h2>提供サービス</h2>
+    <div class="stats">
+      <div><span class="highlight">契約農業支援：</span>価格交渉力と安定供給の仕組みを構築</div>
+      <div><span class="highlight">ブランド構築：</span>高級ライン・ギフト向け商品で差別化</div>
+      <div><span class="highlight">販路開拓：</span>都市部百貨店やセレクトショップに展開</div>
+      <div><span class="highlight">加工品提案：</span>ジュース・ジャムなど6次産業化も支援</div>
+    </div>
+  </section>
+
+  <section id="model">
+    <h2>ビジネスモデル</h2>
+    <p>以下の収益構造により、サステナブルかつスケーラブルなビジネスを実現します：</p>
     <ul>
-      <li><strong>契約マッチング：</strong>農家と加工会社を直接連携</li>
-      <li><strong>ブランド構築支援：</strong>みかんの物語性を活かした高付加価値化</li>
-      <li><strong>販路開拓：</strong>都市圏・高級小売・飲食店との接続</li>
+      <li><span class="highlight">マッチング手数料：</span>契約成約時に3〜5％</li>
+      <li><span class="highlight">支援報酬：</span>ブランディング・販路開拓に月額または成果報酬</li>
+      <li><span class="highlight">販売マージン：</span>小売向け直販による利ざや確保</li>
     </ul>
+  </section>
+
+  <section id="roadmap">
+    <h2>ロードマップ</h2>
+    <div class="roadmap">
+      <p><strong>1〜3ヶ月：</strong> 契約農家5〜10軒＋加工会社提携、ブランド設計開始</p>
+      <p><strong>4〜6ヶ月：</strong> 初回出荷、オンライン・百貨店での販売開始</p>
+      <p><strong>7ヶ月〜2年：</strong> 他地域・他果実展開、加工品ブランド立ち上げ</p>
+      <p><strong>2年以降：</strong> 全国展開＋アジア輸出</p>
+    </div>
   </section>
 
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>
-      ご質問や連携のご相談は、以下までご連絡ください。<br>
-      <strong>Email:</strong> okamoto04140414@gmail.com<br>
-      <strong>Tel:</strong> 070-8337-1350
-    </p>
+    <p>提携やご相談など、お気軽にご連絡ください。</p>
+    <p><strong>Email:</strong> okamoto04140414@gmail.com<br>
+       <strong>Tel:</strong> 070-8337-1350</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
-    <p>
-      <a href="request.html">資料請求</a>｜<a href="thankyou.html">送信完了</a>｜<a href="#">Instagram</a>
-    </p>
+    <p>&copy; 2025 Citrus Link - 岡本晴輝 | 契約農業と地域を未来へつなぐ</p>
   </footer>
-
 </body>
 </html>
