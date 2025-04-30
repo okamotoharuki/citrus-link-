@@ -22,7 +22,7 @@
       justify-content: center;
       align-items: center;
       color: white;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      text-align: center;
       position: relative;
     }
     header::after {
@@ -56,10 +56,11 @@
       padding: 1rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: bold;
     }
@@ -90,12 +91,21 @@
     footer {
       background: #023047;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+    footer p, footer a {
+      color: white;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Citrus Link</h1>
     <p>農協に頼らず、地域と未来をつなぐ契約農業の仕組み</p>
@@ -103,9 +113,9 @@
   </header>
 
   <nav>
-      <a href="about.html">ブランドについて</a>
-  <a href="farmers.html">農家紹介</a>
-  <a href="request.html">資料請求</a>
+    <a href="about.html">ブランドについて</a>
+    <a href="farmers.html">農家紹介</a>
+    <a href="request.html">資料請求</a>
     <a href="#concept">私たちの考え</a>
     <a href="#services">サービス</a>
     <a href="#model">ビジネスモデル</a>
@@ -157,7 +167,8 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Citrus Link - 岡本晴輝 | 契約農業と地域を未来へつなぐ</p>
+    <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
+    <p><a href="https://instagram.com/citruslink" target="_blank">Instagramはこちら →</a></p>
   </footer>
 </body>
 </html>
