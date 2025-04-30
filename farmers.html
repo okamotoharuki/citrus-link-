@@ -13,13 +13,21 @@
       margin: 0;
       padding: 2rem;
     }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
     h1 {
       font-size: 2rem;
       color: #264653;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .farmer {
-      background: white;
+      background: #ffffff;
       padding: 1rem;
       margin-bottom: 1.5rem;
       border-radius: 10px;
@@ -32,22 +40,39 @@
     .farmer p {
       font-size: 1rem;
     }
-    a {
-      display: inline-block;
+    footer {
+      text-align: center;
       margin-top: 2rem;
+    }
+    a.button {
+      display: inline-block;
       background-color: #219ebc;
       color: white;
       padding: 0.6rem 1.2rem;
       text-decoration: none;
       border-radius: 8px;
     }
+    .sns a {
+      color: #219ebc;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>提携農家のご紹介</h1>
-  <div class="farmer">
-    <h2>掲載予定中</h2>
+  <div class="container">
+    <h1>提携農家のご紹介</h1>
+    <div class="farmer">
+      <h2>農家A（小田原市）</h2>
+      <p>地域で長年みかんを育ててきた家系。減農薬や有機への挑戦も。</p>
+    </div>
+    <div class="farmer">
+      <h2>農家B（松田町）</h2>
+      <p>標高差を活かした栽培スタイルで、味の深みが特徴。ジュース加工用に人気。</p>
+    </div>
+    <footer class="sns">
+      <p><a href="https://instagram.com/citruslink" target="_blank">Instagramをチェック →</a></p>
+      <a href="index.html" class="button">← トップページに戻る</a>
+    </footer>
   </div>
-  <a href="index.html">← トップページへ戻る</a>
 </body>
 </html>

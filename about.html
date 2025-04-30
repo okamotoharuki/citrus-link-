@@ -3,26 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citrus Link | ブランドについて</title>
+  <title>ブランドについて - Citrus Link</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      background: #fffdf5;
+      background: #fefae0;
       color: #333;
       margin: 0;
       padding: 2rem;
     }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
     h1 {
       font-size: 2rem;
       color: #264653;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     p {
       font-size: 1.1rem;
       line-height: 1.8;
     }
-    a {
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    a.button {
       display: inline-block;
       margin-top: 2rem;
       background-color: #219ebc;
@@ -31,14 +43,24 @@
       text-decoration: none;
       border-radius: 8px;
     }
+    .sns a {
+      color: #219ebc;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>ブランドについて</h1>
-  <p>
-    Citrus Linkは、ただのみかん販売ではありません。農家の思い、地域の土壌、天候の個性、これら全てを商品に込める「ストーリーブランド」を提供しています。
-    高級ラインと家庭用の二層展開により、品質と価格のバランスも実現。パッケージや販売方法にもこだわりを持ち、「みかんのある暮らし」を提案しています。
-  </p>
-  <a href="index.html">← トップページへ戻る</a>
+  <div class="container">
+    <h1>ブランドについて</h1>
+    <p>
+      Citrus Linkは、ただのみかん販売ではありません。<br>
+      農家の思い、地域の土壌、天候の個性、これら全てを商品に込める「ストーリーブランド」を提供しています。<br>
+      高級ラインと家庭用の二層展開により、品質と価格のバランスも実現。パッケージや販売方法にもこだわり、「みかんのある暮らし」を提案しています。
+    </p>
+    <footer class="sns">
+      <p><a href="https://instagram.com/citruslink" target="_blank">Instagramをチェック →</a></p>
+      <a href="index.html" class="button">← トップページに戻る</a>
+    </footer>
+  </div>
 </body>
 </html>
