@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citrus Link | 契約農業で農家と加工会社をつなぐ</title>
+  <title>Citrus Link | 農家と加工会社をつなぐ契約農業の新基準</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,74 +12,75 @@
       padding: 0;
       background: #fefae0;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background: url('mikan.jpeg') center/cover no-repeat;
-      height: 100vh;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
+      color: white;
       position: relative;
     }
     header::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
       z-index: 0;
     }
     header > * {
       z-index: 1;
     }
     header h1 {
-      font-size: 3rem;
-      margin: 0.5rem;
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
     }
     header a.button {
-      margin-top: 1rem;
-      background: #ffb703;
+      background: #fb8500;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
     }
     nav {
-      background-color: #219ebc;
-      padding: 1rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      padding: 1rem;
+      background-color: #219ebc;
     }
     nav a {
-      color: white;
       margin: 0.5rem 1rem;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
     section {
       max-width: 960px;
       margin: 4rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #264653;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #fb8500;
+      padding-bottom: 0.3rem;
     }
-    .stats, .roadmap {
+    .stats {
       background: #fff;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .stats div {
       margin-bottom: 1rem;
@@ -95,9 +96,6 @@
       margin-top: 4rem;
       border-top: 4px solid #219ebc;
     }
-    .external-links h2 {
-      margin-bottom: 1rem;
-    }
     .external-links a {
       display: inline-block;
       margin: 0.5rem 1rem;
@@ -111,15 +109,24 @@
     .external-links a:hover {
       background-color: #f28400;
     }
+    .venn {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .venn img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
     footer {
       background: #023047;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
-    footer p, footer a {
+    footer a {
       color: white;
-      font-size: 0.95rem;
       text-decoration: none;
     }
     footer a:hover {
@@ -131,120 +138,57 @@
 
   <header>
     <h1>Citrus Link</h1>
-    <p>農協に頼らず、地域と未来をつなぐ契約農業の仕組み</p>
+    <p>地域と未来をつなぐ、契約農業の次なるステージへ</p>
     <a href="request.html" class="button">資料請求はこちら</a>
   </header>
 
   <nav>
+    <a href="about.html">ブランドについて</a>
+    <a href="farmers.html">農家紹介</a>
+    <a href="request.html">資料請求</a>
     <a href="#concept">私たちの考え</a>
     <a href="#services">サービス</a>
-    <a href="#model">ビジネスモデル</a>
-    <a href="#roadmap">ロードマップ</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 
   <section id="concept">
     <h2>なぜCitrus Linkか</h2>
-    <p>農家はJAに依存せずに販路を得たい。加工会社は安定した原材料を確保したい。<br>
-    Citrus Linkは、温州みかんをはじめとする農産物の契約農業を通じて、双方に新しい価値と安定を届ける事業です。</p>
+    <p>農家と加工会社の間には、ニーズのギャップと課題が存在します。<br>
+    Citrus Linkは、信頼関係と価値を中心にした契約農業で、それらを解決します。</p>
+
+    <div class="venn">
+      <img src="A_Venn_diagram_in_digital_graphic_design_represent.png" alt="関係性を示すベン図">
+    </div>
   </section>
 
   <section id="services">
     <h2>提供サービス</h2>
     <div class="stats">
-      <table style="width:100%; border-collapse: collapse; margin-top: 2rem;">
-  <thead style="background-color: #f0f0f0;">
-    <tr>
-      <th style="border: 1px solid #ccc; padding: 0.5rem;">サービス名</th>
-      <th style="border: 1px solid #ccc; padding: 0.5rem;">内容</th>
-      <th style="border: 1px solid #ccc; padding: 0.5rem;">対象</th>
-      <th style="border: 1px solid #ccc; padding: 0.5rem;">課金モデル</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">契約農業支援</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">農家と加工会社のマッチング</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">農家・加工会社</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">取引額の3〜5%</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">ブランド構築</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">パッケージ・ストーリー設計</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">農家</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">月額 or 成果報酬</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">販路開拓</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">小売・百貨店への営業支援</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">加工会社・農家</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">成果報酬</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">加工品展開</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">ジュース・ジャムなどの商品化</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">農家</td>
-      <td style="border: 1px solid #ccc; padding: 0.5rem;">成果報酬・一部出資</td>
-    </tr>
-  </tbody>
-</table>
-
-      <div><span class="highlight">契約農業支援：</span>価格交渉力と安定供給の仕組みを構築</div>
-      <div><span class="highlight">ブランド構築：</span>高級ライン・ギフト向け商品で差別化</div>
-      <div><span class="highlight">販路開拓：</span>都市部百貨店やセレクトショップに展開</div>
-      <div><span class="highlight">加工品提案：</span>ジュース・ジャムなど6次産業化も支援</div>
+      <div><span class="highlight">契約農業支援：</span> 価格交渉力と安定供給の仕組み</div>
+      <div><span class="highlight">ブランド構築：</span> 高級ラインとギフト提案</div>
+      <div><span class="highlight">販路開拓：</span> 百貨店・EC展開サポート</div>
+      <div><span class="highlight">加工品提案：</span> ジュース・ジャム等の開発支援</div>
     </div>
-  </section>
-
-  <section id="model">
-    <h2>ビジネスモデル</h2>
-    <p>以下の収益構造により、サステナブルかつスケーラブルなビジネスを実現します：</p>
-    <ul>
-      <div style="display: flex; justify-content: center; margin-top: 2rem;">
-  <div style="text-align: center;">
-    <div style="width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(#fb8500 0% 40%, #219ebc 40% 75%, #fefae0 75% 100%); margin: auto;"></div>
-    <p style="margin-top: 0.5rem;">売上構成比</p>
-  </div>
-</div>
-<ul>
-  <li><span style="color:#fb8500; font-weight:bold;">40%</span>：マッチング手数料</li>
-  <li><span style="color:#219ebc; font-weight:bold;">35%</span>：ブランディング・販路支援</li>
-  <li><span style="color:#fefae0; font-weight:bold;">25%</span>：小売マージン</li>
-</ul>
-
-      <li><span class="highlight">マッチング手数料：</span>契約成約時に3〜5％</li>
-      <li><span class="highlight">支援報酬：</span>ブランディング・販路開拓に月額または成果報酬</li>
-      <li><span class="highlight">販売マージン：</span>小売向け直販による利ざや確保</li>
-    </ul>
-  </section>
-
-  <section id="roadmap">
-    <h2>ロードマップ</h2>
-    <div class="roadmap">
-      <p><strong>1〜3ヶ月：</strong> 契約農家5〜10軒＋加工会社提携、ブランド設計開始</p>
-      <p><strong>4〜6ヶ月：</strong> 初回出荷、オンライン・百貨店での販売開始</p>
-      <p><strong>7ヶ月〜2年：</strong> 他地域・他果実展開、加工品ブランド立ち上げ</p>
-      <p><strong>2年以降：</strong> 全国展開＋アジア輸出</p>
-    </div>
-  </section>
-
-  <section class="external-links">
-    <h2>関連ページ</h2>
-    <a href="about.html">ブランドについて</a>
-    <a href="farmers.html">農家紹介</a>
-    <a href="request.html">資料請求</a>
   </section>
 
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>提携やご相談など、お気軽にご連絡ください。</p>
+    <p>ご質問や提携のご相談はお気軽にご連絡ください。</p>
     <p><strong>Email:</strong> okamoto04140414@gmail.com<br>
-       <strong>Tel:</strong> 070-8337-1350</p>
+    <strong>Tel:</strong> 070-8337-1350</p>
   </section>
+
+  <div class="external-links">
+    <h2>関連ページ</h2>
+    <a href="about.html">ブランドについて</a>
+    <a href="farmers.html">農家紹介</a>
+    <a href="request.html">資料請求</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
     <p><a href="https://instagram.com/citruslink" target="_blank">Instagramはこちら →</a></p>
   </footer>
+
 </body>
 </html>
