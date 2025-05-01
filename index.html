@@ -101,6 +101,15 @@
       color: white;
       text-decoration: none;
     }
+    @media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;     /* ← スマホ時に小さくする */
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
     @media (min-width: 768px) {
       .features {
         grid-template-columns: 1fr 1fr;
