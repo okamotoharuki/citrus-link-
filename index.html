@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citrus Link | 農家と加工会社をつなぐ契約農業の新基準</title>
+  <title>Citrus Link | 契約農業による地域流通革命</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
@@ -13,6 +13,7 @@
       padding: 0;
       background: #fefae0;
       color: #333;
+      line-height: 1.7;
     }
     .hero {
       position: relative;
@@ -61,13 +62,34 @@
     section {
       max-width: 960px;
       margin: 4rem auto;
-      padding: 0 1.5rem;
+      padding: 1.5rem;
     }
     h2 {
       font-size: 2rem;
       color: #264653;
       border-bottom: 2px solid #fb8500;
       padding-bottom: 0.3rem;
+    }
+    .img-box {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .img-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .feature {
+      background: #ffffffdd;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     footer {
       background: #023047;
@@ -79,8 +101,10 @@
       color: white;
       text-decoration: none;
     }
-    footer a:hover {
-      text-decoration: underline;
+    @media (min-width: 768px) {
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -93,7 +117,7 @@
     </video>
     <div class="hero-text">
       <h1>みかんがつなぐ、地域と未来。</h1>
-      <p>Citrus Link - 農家と加工会社を契約で結ぶ、新しい流通のかたち</p>
+      <p>Citrus Link - 契約農業による流通の再設計</p>
     </div>
   </section>
 
@@ -101,18 +125,43 @@
     <a href="about.html">ブランドについて</a>
     <a href="farmers.html">農家紹介</a>
     <a href="request.html">資料請求</a>
-    <a href="#services">サービス</a>
+    <a href="#business">事業内容</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 
-  <section id="services">
-    <h2>提供サービス</h2>
-    <p>価格交渉力と安定供給を支える契約農業モデル、ギフト需要にも応えるブランディング支援。</p>
+  <section id="business">
+    <h2>私たちの事業内容</h2>
+    <p>Citrus Linkは、神奈川県小田原を拠点に、温州みかん農家と食品加工会社を結ぶ「契約農業」モデルを軸に、農業の収益安定化とブランド化を推進しています。</p>
+
+    <div class="img-box">
+      <img src="A_high-resolution_digital_photograph_captures_an_o.png" alt="みかん農園の写真">
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h3>契約農業による安定供給</h3>
+        <p>農家と加工会社の間であらかじめ価格・納期を取り決めた契約により、安定した収入と安定した原材料調達を実現。</p>
+      </div>
+      <div class="feature">
+        <h3>ブランド構築と販売支援</h3>
+        <p>単なる農産物ではなく、「物語のある商品」としてブランディング。ギフト市場や都市部の百貨店にも展開。</p>
+      </div>
+      <div class="feature">
+        <h3>加工品の商品開発支援</h3>
+        <p>ジュースやジャムなどの6次産業化を支援。パッケージ設計・ラベル制作・価格戦略までサポート。</p>
+      </div>
+      <div class="feature">
+        <h3>都市部への販路拡大</h3>
+        <p>都内のセレクトショップ、カフェ、百貨店、ふるさと納税の特設ページ等へ農家・加工会社の販路を開拓。</p>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>メール：okamoto04140414@gmail.com<br>電話：070-8337-1350</p>
+    <p>ご質問や提携のご相談はお気軽にご連絡ください。</p>
+    <p><strong>Email:</strong> okamoto04140414@gmail.com<br>
+    <strong>Tel:</strong> 070-8337-1350</p>
   </section>
 
   <footer>
