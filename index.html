@@ -13,57 +13,44 @@
       padding: 0;
       background: #fefae0;
       color: #333;
-      line-height: 1.7;
     }
-    header {
-      background: url('mikan.jpeg') center/cover no-repeat;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
+    .hero {
       position: relative;
+      height: 100vh;
       overflow: hidden;
     }
-    header::after {
-      content: "";
+    .hero-bg {
       position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       z-index: 0;
     }
-    header > * {
+    .hero-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 1;
-      animation: fadeInUp 1.5s ease-out;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-    header a.button {
-      background: #fb8500;
+      text-align: center;
       color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      padding: 2rem;
     }
-    header a.button:hover {
-      background-color: #f28400;
+    .hero-text h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin: 0;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
     }
     nav {
+      background-color: #219ebc;
+      padding: 1rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 1rem;
-      background-color: #219ebc;
     }
     nav a {
       margin: 0.5rem 1rem;
@@ -75,60 +62,12 @@
       max-width: 960px;
       margin: 4rem auto;
       padding: 0 1.5rem;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease-out;
-    }
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
     }
     h2 {
       font-size: 2rem;
       color: #264653;
-      margin-bottom: 1rem;
       border-bottom: 2px solid #fb8500;
       padding-bottom: 0.3rem;
-    }
-    .stats {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .highlight {
-      color: #fb8500;
-      font-weight: bold;
-    }
-    .external-links {
-      background: #ffffff;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-      border-top: 4px solid #219ebc;
-    }
-    .external-links a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #fb8500;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .external-links a:hover {
-      background-color: #f28400;
-    }
-    .venn {
-      text-align: center;
-      margin: 2rem auto;
-    }
-    .venn img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     footer {
       background: #023047;
@@ -143,87 +82,43 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    @keyframes fadeInUp {
-      0% { transform: translateY(40px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      nav { flex-direction: column; align-items: center; }
-      nav a { margin: 0.5rem 0; }
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Citrus Link</h1>
-    <p>地域と未来をつなぐ、契約農業の次なるステージへ</p>
-    <a href="request.html" class="button">資料請求はこちら</a>
-  </header>
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-bg">
+      <source src="hero.mp4" type="video/mp4">
+      お使いのブラウザは動画タグに対応していません。
+    </video>
+    <div class="hero-text">
+      <h1>みかんがつなぐ、地域と未来。</h1>
+      <p>Citrus Link - 農家と加工会社を契約で結ぶ、新しい流通のかたち</p>
+    </div>
+  </section>
 
   <nav>
     <a href="about.html">ブランドについて</a>
     <a href="farmers.html">農家紹介</a>
     <a href="request.html">資料請求</a>
-    <a href="#concept">私たちの考え</a>
     <a href="#services">サービス</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
 
-  <section id="concept">
-    <h2>なぜCitrus Linkか</h2>
-    <p>農家と加工会社の間には、ニーズのギャップと課題が存在します。<br>
-    Citrus Linkは、信頼関係と価値を中心にした契約農業で、それらを解決します。</p>
-    <div class="venn">
-      <img src="A_Venn_diagram_in_digital_graphic_design_represent.png" alt="関係性を示すベン図">
-    </div>
-  </section>
-
   <section id="services">
     <h2>提供サービス</h2>
-    <div class="stats">
-      <p><span class="highlight">契約農業支援：</span> 価格交渉力と安定供給の仕組み</p>
-      <p><span class="highlight">ブランド構築：</span> 高級ラインとギフト提案</p>
-      <p><span class="highlight">販路開拓：</span> 百貨店・EC展開サポート</p>
-      <p><span class="highlight">加工品提案：</span> ジュース・ジャム等の開発支援</p>
-    </div>
+    <p>価格交渉力と安定供給を支える契約農業モデル、ギフト需要にも応えるブランディング支援。</p>
   </section>
 
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>ご質問や提携のご相談はお気軽にご連絡ください。</p>
-    <p><strong>Email:</strong> okamoto04140414@gmail.com<br>
-    <strong>Tel:</strong> 070-8337-1350</p>
+    <p>メール：okamoto04140414@gmail.com<br>電話：070-8337-1350</p>
   </section>
-
-  <div class="external-links">
-    <h2>関連ページ</h2>
-    <a href="about.html">ブランドについて</a>
-    <a href="farmers.html">農家紹介</a>
-    <a href="request.html">資料請求</a>
-  </div>
 
   <footer>
     <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
     <p><a href="https://instagram.com/citruslink" target="_blank">Instagramはこちら →</a></p>
   </footer>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 
 </body>
 </html>
