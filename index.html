@@ -6,6 +6,7 @@
   <title>Citrus Link | 農家と加工会社をつなぐ契約農業の新基準</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
@@ -24,6 +25,7 @@
       text-align: center;
       color: white;
       position: relative;
+      overflow: hidden;
     }
     header::after {
       content: "";
@@ -34,13 +36,14 @@
     }
     header > * {
       z-index: 1;
+      animation: fadeInUp 1.5s ease-out;
     }
     header h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
     header a.button {
@@ -50,6 +53,10 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    header a.button:hover {
+      background-color: #f28400;
     }
     nav {
       display: flex;
@@ -68,6 +75,13 @@
       max-width: 960px;
       margin: 4rem auto;
       padding: 0 1.5rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     h2 {
       font-size: 2rem;
@@ -81,9 +95,6 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .stats div {
-      margin-bottom: 1rem;
     }
     .highlight {
       color: #fb8500;
@@ -132,6 +143,18 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      nav { flex-direction: column; align-items: center; }
+      nav a { margin: 0.5rem 0; }
+    }
   </style>
 </head>
 <body>
@@ -155,7 +178,6 @@
     <h2>なぜCitrus Linkか</h2>
     <p>農家と加工会社の間には、ニーズのギャップと課題が存在します。<br>
     Citrus Linkは、信頼関係と価値を中心にした契約農業で、それらを解決します。</p>
-
     <div class="venn">
       <img src="A_Venn_diagram_in_digital_graphic_design_represent.png" alt="関係性を示すベン図">
     </div>
@@ -164,10 +186,10 @@
   <section id="services">
     <h2>提供サービス</h2>
     <div class="stats">
-      <div><span class="highlight">契約農業支援：</span> 価格交渉力と安定供給の仕組み</div>
-      <div><span class="highlight">ブランド構築：</span> 高級ラインとギフト提案</div>
-      <div><span class="highlight">販路開拓：</span> 百貨店・EC展開サポート</div>
-      <div><span class="highlight">加工品提案：</span> ジュース・ジャム等の開発支援</div>
+      <p><span class="highlight">契約農業支援：</span> 価格交渉力と安定供給の仕組み</p>
+      <p><span class="highlight">ブランド構築：</span> 高級ラインとギフト提案</p>
+      <p><span class="highlight">販路開拓：</span> 百貨店・EC展開サポート</p>
+      <p><span class="highlight">加工品提案：</span> ジュース・ジャム等の開発支援</p>
     </div>
   </section>
 
@@ -189,6 +211,19 @@
     <p>&copy; 2025 Citrus Link - 岡本晴輝</p>
     <p><a href="https://instagram.com/citruslink" target="_blank">Instagramはこちら →</a></p>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 </html>
